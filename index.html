@@ -13,10 +13,102 @@
       crossorigin="anonymous"
     />
 
-    <title>Hello, world!</title>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/baa8a0d73c.js" crossorigin="anonymous"></script>
+
+    <title>Money Management</title>
+
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div class="container-fluid mt-3 text-center">
+      <h1 class="shadow-lg">Money Management</h1>
+    </div>
+    <div class="container-fluid mt-5">
+      <div class="card">
+        <div class="row g-0 align-items-center">
+          <div class="col-md-6">
+            <img
+              src="money-master-main/calculateMoney.jpg"
+              alt=""
+              width="90%"
+              height="100%"
+            />
+          </div>
+          <div class="col-md-6">
+            <div class="card-body">
+
+                <!-- Income Section -->
+                <div class="container-fluid">
+                    <h2 class="card-title text-center shadow-lg">Income</h5>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Income</span>
+                            <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                          </div>
+                </div>
+
+              <!--Expenses Section -->
+                <div class="container-fluid">
+                    <h3 class="card-title text-center shadow-lg">Expenses</h3>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Food</span>
+                            <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                          </div>
+
+                          <div class="input-group mb-3">
+                            <span class="input-group-text">Rent</span>
+                            <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                          </div>
+
+                          <div class="input-group mb-3">
+                            <span class="input-group-text">Cloth</span>
+                            <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                          </div>
+                </div>
+
+                <!-- Button -->
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                    <button class="btn btn-primary" type="submit">Calculate</button>
+                  </div>
+             
+                  <!-- Expenses & Balance Section -->
+                  <div class="container-fluid mt-2">
+                    <h5 class="card-title text-center">Total Expenses: 2100</h5>
+                    <h5 class="card-title text-center">Balance: 2100</h5>
+                </div>
+
+                <!-- Saving Section -->
+                <div class="container-fluid mt-3 ">
+                    <div class="row g-3 justify-content-center align-items-center">
+                        <div class="col-auto ">
+                          <label  class="col-form-label"><h4> Save</h4></label>
+                        </div>
+    
+                        <div class="col-auto">
+                            <input type="number"  class="form-control" >
+                          </div>
+                          <div class="col-auto">
+                            <span id="passwordHelpInline" class="form-text">
+                               Percent <i class="fa-regular fa-percent"></i>
+                               <button class="btn btn-primary ms-2" type="submit">Calculate</button>
+                            </span>
+                        </div>
+
+                        <!-- Amount & Balance Section -->
+                  <div class="container-fluid mt-5">
+                    <h5 class="card-title text-center">Total Expenses: 2100</h5>
+                    <h5 class="card-title text-center mt-2">Balance: 2100</h5>
+                </div>
+
+                </div>
+                
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
