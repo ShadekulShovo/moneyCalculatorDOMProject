@@ -22,16 +22,16 @@
   </head>
   <body>
     <div class="container-fluid mt-3 text-center">
-      <h1 class="shadow-lg">Money Management</h1>
+      <h1 class="shadow-lg bg-warning p-2">Money Management</h1>
     </div>
-    <div class="container-fluid mt-5">
+    <div class="container-fluid mt-3">
       <div class="card">
         <div class="row g-0 align-items-center">
           <div class="col-md-6">
             <img
               src="money-master-main/calculateMoney.jpg"
               alt=""
-              width="90%"
+              width="100%"
               height="100%"
             />
           </div>
@@ -40,49 +40,52 @@
 
                 <!-- Income Section -->
                 <div class="container-fluid">
-                    <h2 class="card-title text-center shadow-lg">Income</h5>
+                    <h2 class="card-title text-center shadow-lg bg-success text-white p-1">Income</h5>
                         <div class="input-group mb-3">
                             <span class="input-group-text">Income</span>
-                            <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <input id="incomeAmountInput" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
                           </div>
                 </div>
 
               <!--Expenses Section -->
                 <div class="container-fluid">
-                    <h3 class="card-title text-center shadow-lg">Expenses</h3>
+                    <h3 class="card-title text-center shadow-lg bg-danger text-white p-1">Expenses</h3>
                         <div class="input-group mb-3">
                             <span class="input-group-text">Food</span>
-                            <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <input id="foodExpenseAmountInput" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
                           </div>
 
                           <div class="input-group mb-3">
                             <span class="input-group-text">Rent</span>
-                            <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <input id="rentExpenseAmountInput" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
                           </div>
 
                           <div class="input-group mb-3">
                             <span class="input-group-text">Cloth</span>
-                            <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <input id="clothExpenseAmountInput" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
                           </div>
                 </div>
 
                 <!-- Button -->
 
                 <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                    <button class="btn btn-primary" type="submit">Calculate</button>
+                    <button id="calculationButton" class="btn btn-warning" type="submit">Calculate</button>
                   </div>
              
                   <!-- Expenses & Balance Section -->
                   <div class="container-fluid mt-2">
-                    <h5 class="card-title text-center">Total Expenses: 2100</h5>
-                    <h5 class="card-title text-center">Balance: 2100</h5>
+                    <h5  class="card-title text-center">Total Income:$<span id="totalIncome">00</span></h5>
+                    <h5  class="card-title text-center">Total Expenses:$<span id="totalExpense">00</span></h5>
+                    <h5  class="card-title text-center">Balance:$<span id="totalBalance">00</span></h5>
                 </div>
 
                 <!-- Saving Section -->
                 <div class="container-fluid mt-3 ">
                     <div class="row g-3 justify-content-center align-items-center">
                         <div class="col-auto ">
-                          <label  class="col-form-label"><h4> Save</h4></label>
+                            <span class="input-group-text ">
+                           Save
+                            </span>
                         </div>
     
                         <div class="col-auto">
@@ -90,15 +93,16 @@
                           </div>
                           <div class="col-auto">
                             <span id="passwordHelpInline" class="form-text">
-                               Percent <i class="fa-regular fa-percent"></i>
-                               <button class="btn btn-primary ms-2" type="submit">Calculate</button>
+                               <!-- Percent <i class="fa-regular fa-percent"></i> -->
+                               %
+                               <button id="savingCalculationButton" class="btn btn-success ms-2" type="submit">Calculate</button>
                             </span>
                         </div>
 
                         <!-- Amount & Balance Section -->
                   <div class="container-fluid mt-5">
-                    <h5 class="card-title text-center">Total Expenses: 2100</h5>
-                    <h5 class="card-title text-center mt-2">Balance: 2100</h5>
+                    <h5 class="card-title text-center">Save Amount:$ <span class="saveAmount">00</span></h5>
+                    <h5 class="card-title text-center mt-2">Net Balance:$ <span class="netBalance">00</span></h5>
                 </div>
 
                 </div>
@@ -111,6 +115,7 @@
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
+    <script src="js/script.js"></script>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script
