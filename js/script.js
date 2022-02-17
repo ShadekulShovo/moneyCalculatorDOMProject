@@ -48,7 +48,31 @@ function balanceAmount(value1, value2) {
   const totalBalances = document.getElementById("totalBalance");
   totalBalances.innerText = balanceAmountTotal;
 
-  return balanceAmountTotal;
+  return parseFloat(balanceAmountTotal);
+}
+
+// Saving Function
+function savingsCount(value3) {
+  const savingInput = document.getElementById("savingsAmount");
+  const savingTotalText = savingInput.value;
+  const savingTotal = parseFloat(savingTotalText);
+
+  const save = (value3 * savingTotal) / 100;
+
+  const totalSaveAmount = document.getElementById("saveAmount");
+  totalSaveAmount.innerText = save;
+
+  // Clear Input Field
+  savingInput.value = "";
+
+  return parseFloat(save);
+}
+
+// Net Balance Function
+function netBalance(value4, value5) {
+  const netTotalBalance = value4 - value5;
+  const remainingAmount = document.getElementById("netBalance");
+  remainingAmount.innerText = netTotalBalance;
 }
 
 // Function Call
@@ -57,5 +81,12 @@ document
   .addEventListener("click", function () {
     var income = incomeCount();
     var expense = expenseCount();
-    balanceAmount(income, expense);
+    var balance = balanceAmount(income, expense);
+
+    document
+      .getElementById("savingCalculationButton")
+      .addEventListener("click", function () {
+        var savingBalance = savingsCount(income);
+        netBalance(balance, savingBalance);
+      });
   });
