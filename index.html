@@ -44,6 +44,7 @@
                         <div class="input-group mb-3">
                             <span class="input-group-text">Income</span>
                             <input id="incomeAmountInput" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <span id="error"></span>
                           </div>
                 </div>
 
@@ -53,16 +54,19 @@
                         <div class="input-group mb-3">
                             <span class="input-group-text">Food</span>
                             <input id="foodExpenseAmountInput" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <span id="error1"></span>
                           </div>
 
                           <div class="input-group mb-3">
                             <span class="input-group-text">Rent</span>
                             <input id="rentExpenseAmountInput" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <span id="error2"></span>
                           </div>
 
                           <div class="input-group mb-3">
                             <span class="input-group-text">Cloth</span>
                             <input id="clothExpenseAmountInput" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <span id="error3"></span>
                           </div>
                 </div>
 
@@ -90,6 +94,7 @@
     
                         <div class="col-auto">
                             <input type="text" id="savingsAmount"  class="form-control" >
+                            <span id="error4"></span>
                           </div>
                           <div class="col-auto">
                             <span id="passwordHelpInline" class="form-text">
@@ -114,7 +119,8 @@
       </div>
     </div>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <!--  JavaScript -->
+    <script src="js/errorMessage.js"></script>
     <script src="js/script.js"></script>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
