@@ -6,8 +6,8 @@ function incomeCount() {
   const incomeTotal = document.getElementById("totalIncome");
   incomeTotal.innerText = incomeAmount;
 
-  // clear Input Fields
-  incomeInput.value = "";
+  //   // clear Input Fields
+  //   incomeInput.value = "";
 
   return parseFloat(incomeAmount);
 }
@@ -34,10 +34,10 @@ function expenseCount() {
   const totalExpenses = document.getElementById("totalExpense");
   totalExpenses.innerText = totalExpense;
 
-  // clear Input Fields
-  foodExpenseInput.value = "";
-  rentExpenseInput.value = "";
-  clothExpenseInput.value = "";
+  //   // clear Input Fields
+  //   foodExpenseInput.value = "";
+  //   rentExpenseInput.value = "";
+  //   clothExpenseInput.value = "";
 
   return parseFloat(totalExpense);
 }
@@ -62,8 +62,8 @@ function savingsCount(value3) {
   const totalSaveAmount = document.getElementById("saveAmount");
   totalSaveAmount.innerText = save;
 
-  // Clear Input Field
-  savingInput.value = "";
+  //   // Clear Input Field
+  //   savingInput.value = "";
 
   return parseFloat(save);
 }
